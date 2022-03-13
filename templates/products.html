@@ -158,12 +158,16 @@ https://www.tooplate.com/view/2114-pixie
                         </tr>
                       </tbody>
                     </table>
+                    <form method="GET" action="{% url 'order_refund' %}">
+                      <input type="hidden" name="order_id" value="{{ order.id }}">
+                      <button type="submit" class="btn btn-primary" style="float: right; margin-right: 20px; margin-bottom: 15px;">Refund Order</button>
+                    </form>  
                   </div>
-
                 </div>
                 {% empty %}
                   You dont have any order yet
               {% endfor %}
+
             </p>
           </div>
           <div class="modal-footer">
