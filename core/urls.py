@@ -10,6 +10,7 @@ urlpatterns = [
 	path('add_to_cart', add_to_cart, name = 'add_to_cart'),
 	path('products', products, name = 'products'),
 	path('checkout', checkout, name = 'checkout'),
+	path('order_refund', order_refund, name = 'order_refund'),
 	path('order', order, name = 'order'),
 
 	path('remove_from_cart/<id>', remove_from_cart, name = 'remove_from_cart'),
