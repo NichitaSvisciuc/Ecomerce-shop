@@ -105,7 +105,7 @@ def products(request):
 
 	stash = Stash.objects.get(user = request.user)
 
-	orders = Order.objects.filter(user = request.user)
+	orders = Order.objects.filter(user = request.user, refund = False)
 
 	context = {
 		'stash' : stash,
@@ -203,6 +203,17 @@ def remove_single_item(request, id):
 		item.delete()
 
 	return redirect('products')	
+
+@login_required
+def order_refund(request):
+	
+	order_id = request.GET.get('order_id')	
+	curent_order = Order.objects.get(id = order_id)
+
+	curent_order.refund = True
+	curent_order.save()
+
+	return redirect('products')
 
 def register(request):
 
