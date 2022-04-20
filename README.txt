@@ -9,14 +9,4 @@ when u are in projects folder through cmd:
 > pip install -r requirements.txt
 > python manage.py runserver
 
-Data for sandbox PayPal accounts:
-
-Business account:
-ViteaBizness@gmail.com
-yasuo228
-
-Personal account:
-JitalikPocupateliu@gmail.com
-yasuo228
-
 Enjoy !
